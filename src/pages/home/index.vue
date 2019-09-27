@@ -1,5 +1,5 @@
 <template>
-   <div>mine</div>
+   <div>home</div>
 </template>
 
 <script>
@@ -9,5 +9,8 @@ export default {
 
         }
     }
+    // onLoad:function(){
+    //     if(wx.get)
+    // }
 }
 </script>

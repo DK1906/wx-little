@@ -7,7 +7,10 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    count: 0
+    count: 0,
+    newsList:[],
+    newsDetail:[]
+
   },
   mutations: {
     increment: (state) => {
@@ -17,7 +20,14 @@ const store = new Vuex.Store({
     decrement: (state) => {
       const obj = state
       obj.count -= 1
+    },
+    getNewsList:(state,list)=>{
+      state.newsList = list
+    },
+    getnewsDetail:(state,newsDetail)=>{
+      state.newsDetail = newsDetail
     }
+    
   }
 })
 
