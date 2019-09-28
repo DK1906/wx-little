@@ -5,7 +5,7 @@
               <p> {{detail.title}} </p>
               <p>{{detail.author}}</p>
               <p>{{detail.summary}}</p>
-        <div><wxParse :content="detail.content" ></wxParse></div>
+        <div class="content"><wxParse :content="detail.content" /></div>
         <!-- <div v-html="detail.content"></div> -->
           </li>
       </ul>
@@ -33,6 +33,9 @@ export default {
         console.log(options) 
         var aid = options.aid
         this.getnewsDetail(aid)
+        wx.showShareMenu({
+  withShareTicket: true
+})
 
     },
    methods:{
